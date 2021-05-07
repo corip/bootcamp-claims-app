@@ -1,0 +1,35 @@
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#    register-with-eureka: true
+#    fetch-registry: true
+
+spring:
+#  profiles:
+#    active: dev
+  application:
+    name: bootcamp-hackaton-claims
+  config:
+    import: optional:configserver:http://localhost:8888
+#    import: optional:configserver:http://ip172-18-0-13-c1nmrc8h550g00dqjmu0-8888.direct.labs.play-with-docker.com
+
+
+##
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost/db_fixit?useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: root
+#
+#  jpa:
+#    show-sql: true
+#    database-platform: org.hibernate.dialect.MySQL57Dialect
+#    hibernate:
+#      ddl-auto: create-drop
+      
+      
+
+##        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+##        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
